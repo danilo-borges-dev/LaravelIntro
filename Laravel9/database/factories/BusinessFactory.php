@@ -17,7 +17,9 @@ class BusinessFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->company,
+            'email' => $this->faker->safeEmail,
+            'address' => $this->faker->address,
         ];
     }
 }
