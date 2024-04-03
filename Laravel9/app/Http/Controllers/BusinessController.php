@@ -9,17 +9,12 @@ class BusinessController extends Controller
 {
     public function index()
     {
-        $businesses = Business::all();
+        $business = Business::create([
+            'name' => 'Jhon Snow',
+            'email' => 'jhon@gmail.com',
+            'address' => 'Rua a quadra b'
+        ]);
 
-        $business = Business::find(1);
-
-        $whereBusiness = Business::where('name', 'Adams-Deckow')
-            ->where('email', 'ahintz@example.com')
-            ->get();
-
-        $whereFirstBusiness = Business::where('name', 'Adams-Deckow')
-            ->first();
-
-        dd($businesses, $business, $whereBusiness, $whereFirstBusiness);
+        dd($business);
     }
 }
