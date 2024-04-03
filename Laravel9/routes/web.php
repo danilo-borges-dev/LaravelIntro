@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/user/{user?}', [UserController::class, 'show']);
 Route::get('/users', [UserController::class, 'index']);
 Route::get('/business', [BusinessController::class, 'index']);
+Route::get('/business/{id}', [BusinessController::class, 'update']);
 
 
 

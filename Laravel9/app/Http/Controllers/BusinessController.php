@@ -17,4 +17,15 @@ class BusinessController extends Controller
 
         dd($business);
     }
+
+    public function update($id)
+    {
+        $business = Business::find($id)->update([
+            'name' => 'Danilo Borges',
+            'email' => 'danilo@hotmail.com',
+            'address' => 'Rua B quadra C'
+        ]);
+
+        dd($business);
+    }
 }
